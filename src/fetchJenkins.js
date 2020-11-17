@@ -1,21 +1,20 @@
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
 const timeConv = require('./time');
+
 const SUCCESS = 'SUCCESS';
 
-let fetchData = async(url) => {
-    let response = await fetch(url);
-    let result = await response.json();
-    let success = result.allBuilds.filter(x => {
-        return x.result === SUCCESS;
-    });
-    let desiredData = success.map(x => {
-        let buildNumber = x.id;
-        let date = timeConv.timeConverter(x.timestamp);
-        let duration = timeConv.durationConverter(x.duration);
-        let min = timeConv.sec2min(x.duration);
-        return {buildNumber, min};
-    });
-    return desiredData;
-}
+const fetchData = async (url) => {
+  const response = await fetch(url);
+  const result = await response.json();
+  const success = result.allBuilds.filter((x) => x.result === SUCCESS);
+  const desiredData = success.map((x) => {
+    const buildNumber = x.id;
+    const date = timeConv.timeConverter(x.timestamp);
+    const duration = timeConv.durationConverter(x.duration);
+    const min = timeConv.sec2min(x.duration);
+    return { buildNumber, min };
+  });
+  return desiredData;
+};
 
 exports.fetchData = fetchData;
