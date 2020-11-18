@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const timeConv = require('./time');
+const timeConv = require('./time.js');
 
 const SUCCESS = 'SUCCESS';
 
