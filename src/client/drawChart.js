@@ -1,31 +1,55 @@
-// const fetchData = async () => {
-//   const response = await fetch('data');
-//   const result = await response.json();
-//   return result;
-// };
-//
-// const drawChart = (data) => {
-//   const svg = dimple.newSvg('body', 1000, 1000);
-//   const chart = new dimple.chart(svg, data);
-//   chart.addCategoryAxis('x', 'buildNumber');
-//   chart.addMeasureAxis('y', 'min');
-//   chart.addSeries(null, dimple.plot.line);
-//   chart.draw();
-// };
-//
-// const setTitle = () => {
-//   const title = document.getElementById('title');
-//   title.innerText = 'Merge-Master';
-// };
-//
-// fetchData().then((data) => {
-//   console.log(data);
-//   drawChart(data);
-//   setTitle();
-// });
+import Chart from 'chart.js';
 
-const fetchData = () => "fetch data";
-const drawChart = () => "draw chart";
+const config = (x, y) => ({
+  type: 'line',
+  data: {
+    labels: x,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'red',
+      borderColor: 'blue',
+      data: y,
+      fill: false,
+    }]
+  },
+  options: {
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Sam Makes a Chart'
+    },
+    tooltips: {
+      mode: 'index',
+      intersect: false,
+    },
+    hover: {
+      mode: 'nearest',
+      intersect: true
+    },
+    scales: {
+      x: {
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'BuildNumber'
+        }
+      },
+      y: {
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Value'
+        }
+      }
+    }
+  }
+});
 
+const makeChart = (x,y) => {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  document.body.appendChild(canvas);
+  new Chart(ctx, config(x,y));
+};
 
-export {fetchData, drawChart};
+export { makeChart };

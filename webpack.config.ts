@@ -15,6 +15,8 @@ module.exports = {
     rules: [{
         test: /\.css$/,
         use: ['style-loader','css-loader']
+    },{
+        test: /\.ts$/, loader: 'babel-loader'
     }]
   },
   plugins: [

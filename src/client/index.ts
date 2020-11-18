@@ -1,12 +1,21 @@
 import './index.css';
-import {fetchData, drawChart} from './drawChart.js';
+import { makeChart } from './drawChart';
 
- const component = () => {
-    fetch('/api')
-    .then(response => response.json())
-    .then(x => console.log(x));
+let buildNumber: number[] = [];
+let min: number[] = [];
 
-   return document.createElement('div');
- }
+interface jenkinsData {
+    buildNumber: number;
+    min: number;
+}
+const component = async () => {
+  let response = await fetch('/api/data');
+  let a = await response.json();
+  a.map((val: jenkinsData)  => {
+      buildNumber.push(val.buildNumber);
+      min.push(val.min);
+  });
+  makeChart(buildNumber, min);
+};
 
-document.body.appendChild(component());
+component();
