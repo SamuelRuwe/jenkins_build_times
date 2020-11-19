@@ -1,11 +1,9 @@
-const express = require('express');
-
+import express from 'express';
 const app = express();
-const path = require('path');
-const { fetchData } = require('./fetchJenkins.js');
-const { jobLinks } = require('./jenkinsJobs.js');
+import { fetchData } from './fetchJenkins.js';
+import { jobLinks } from './jenkinsJobs.js';
 
-app.get('/api/data', (req, res) => {
+app.get('/api/data', (req , res) => {
   fetchData(jobLinks.MERGE_MASTER.link)
     .then((data) => res.send(data));
 });

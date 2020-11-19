@@ -6,14 +6,17 @@ const min: number[] = [];
 
 interface jenkinsData {
     buildNumber: number;
-    min: number;
+    minutes: number;
 }
+
 const component = async () => {
   const response = await fetch('/api/data');
+  console.log("called server");
   const a = await response.json();
+  console.log(a);
   a.map((val: jenkinsData) => {
     buildNumber.push(val.buildNumber);
-    min.push(val.min);
+    min.push(val.minutes);
   });
   makeChart(buildNumber, min);
 };
