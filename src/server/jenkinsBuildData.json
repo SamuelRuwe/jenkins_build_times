@@ -1,7 +1,7 @@
 [
   {
     "buildNumber": "1618",
-    "date": "19 Nov 2020 9:2:09",
+    "date": "19 Nov 2020 9:02:09",
     "result": null,
     "duration": "00:00:00",
     "minutes": 0
@@ -64,7 +64,7 @@
   },
   {
     "buildNumber": "1609",
-    "date": "17 Nov 2020 13:5:01",
+    "date": "17 Nov 2020 13:05:01",
     "result": "FAILURE",
     "duration": "01:02:03",
     "minutes": 62
@@ -113,7 +113,7 @@
   },
   {
     "buildNumber": "1602",
-    "date": "16 Nov 2020 12:6:08",
+    "date": "16 Nov 2020 12:06:08",
     "result": "FAILURE",
     "duration": "01:14:32",
     "minutes": 74

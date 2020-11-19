@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: ['babel-polyfill', './src/client/index.ts'],
@@ -10,6 +11,11 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  target: 'node',
+  node: {
+    __dirname: false,
+    __filename: false
   },
   module: {
     rules: [{

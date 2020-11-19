@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "server": "npx ts-node src/server/app.ts",
+    "server": "npx ts-node src/server/server.ts",
     "test": "npx jest --coverage",
     "clean": "npx eslint src/ --ext .ts,.js --fix",
     "build": "npx webpack --mode production",

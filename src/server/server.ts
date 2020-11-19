@@ -16,9 +16,9 @@ app.get('/api/data', async (req, res) => {
   // console.log("Appending Data!");
   appendNewData(data, fileLocation);
   const actualData = getData();
-  // const successfulBuilds = removeFailures(actualData);
-  // const sortedData = sortByBuildNumber(successfulBuilds);
-  res.send(actualData);
+  const successfulBuilds = removeFailures(actualData);
+  const sortedData = sortByBuildNumber(successfulBuilds);
+  res.send(sortedData);
 });
 
 app.listen(process.env.PORT || 3000, () => console.log(`Listening on port ${process.env.PORT || 3000}!`));
