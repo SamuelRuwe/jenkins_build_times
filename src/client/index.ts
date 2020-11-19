@@ -11,9 +11,7 @@ interface jenkinsData {
 
 const component = async () => {
   const response = await fetch('/api/data');
-  console.log("called server");
   const a = await response.json();
-  console.log(a);
   a.map((val: jenkinsData) => {
     buildNumber.push(val.buildNumber);
     min.push(val.minutes);

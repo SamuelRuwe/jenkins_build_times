@@ -19,9 +19,9 @@ const secondsToMinutes = (seconds: number) => Math.floor(seconds / 60);
 const pad = (num: number, size: number) => (`000${num}`).slice(size * -1);
 
 const durationToMinutes = (duration: number) => {
-   const seconds = millsecondsToSeconds(duration);
-   return secondsToMinutes(seconds);
-}
+  const seconds = millsecondsToSeconds(duration);
+  return secondsToMinutes(seconds);
+};
 
 const durationToHours = (duration: number) => {
   const timeInSeconds: number = millsecondsToSeconds(duration);
@@ -32,4 +32,6 @@ const durationToHours = (duration: number) => {
   return `${pad(hours, 2)}:${pad(minutes, 2)}:${pad(seconds, 2)}`;
 };
 
-export { unixTimestampToDate, durationToHours, secondsToMinutes, millsecondsToSeconds, durationToMinutes };
+export {
+  unixTimestampToDate, durationToHours, secondsToMinutes, millsecondsToSeconds, durationToMinutes
+};

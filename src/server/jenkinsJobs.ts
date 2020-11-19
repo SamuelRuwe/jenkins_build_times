@@ -16,4 +16,4 @@ const jobLinks = {
   }
 };
 
-exports.jobLinks = jobLinks;
+export { jobLinks };
