@@ -1,22 +1,22 @@
 import Chart from 'chart.js';
 
-const config = (x, y) => ({
+const config = (labelData, dataData) => ({
   type: 'line',
   data: {
-    labels: x,
+    labels: labelData,
     datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'red',
-      borderColor: 'blue',
-      data: y,
+      label: 'Sam',
+      backgroundColor: 'white',
+      borderColor: 'black',
+      data: dataData,
       fill: false,
+      yAxisID: 'y-axis'
     }]
   },
   options: {
     responsive: true,
     title: {
-      display: true,
-      text: 'Sam Makes a Chart'
+      display: false,
     },
     tooltips: {
       mode: 'index',
@@ -27,29 +27,22 @@ const config = (x, y) => ({
       intersect: true
     },
     scales: {
-      x: {
-        display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'BuildNumber'
+      yAxes: [{
+        id: 'y-axis',
+        type: 'linear',
+        ticks: {
+          beginAtZero: true
         }
-      },
-      y: {
-        display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'Value'
-        }
-      }
+      }]
     }
   }
 });
 
-const makeChart = (x,y) => {
+const makeChart = (x, y) => {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
   document.body.appendChild(canvas);
-  new Chart(ctx, config(x,y));
+  new Chart(ctx, config(x, y));
 };
 
 export { makeChart };

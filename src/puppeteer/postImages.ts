@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-const PAGE_URL = 'http://localhost:3000/merge-master';
+const PAGE_URL = 'http://localhost:5432';
 
 const capture = async (url: string) => {
   const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
