@@ -1,7 +1,7 @@
 import { expandedJenkinsBuildTimeData } from './jenkinsBuildTimeData.interface';
 
 const sortByBuildNumber = (data: expandedJenkinsBuildTimeData[]) => {
-   return data.sort((a,b) => (parseInt(a.buildNumber) > parseInt(b.buildNumber)) ? 1 : -1);
-}
+  return data.sort((a, b) => ((Number(a.buildNumber) > Number(b.buildNumber)) ? 1 : -1));
+};
 
 export { sortByBuildNumber };

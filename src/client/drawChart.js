@@ -5,7 +5,7 @@ const config = (labelData, dataData) => ({
   data: {
     labels: labelData,
     datasets: [{
-      label: 'Sam',
+      label: 'minutes',
       backgroundColor: 'white',
       borderColor: 'black',
       data: dataData,

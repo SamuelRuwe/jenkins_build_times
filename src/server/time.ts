@@ -9,7 +9,7 @@ const unixTimestampToDate = (unixTimestamp: number) => {
   const min = a.getMinutes();
   const sec = a.getSeconds();
   return `${date} ${month} ${year} ${hour}:${
-    min}:${sec > 9 ? sec : `0${sec}`}`;
+    min > 9? min:`0${min}`}:${sec > 9 ? sec : `0${sec}`}`;
 };
 
 const millsecondsToSeconds = (milliseconds: number) => milliseconds / 1000;

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for time.ts</title>
+    <title>Code coverage report for appendJenkinsBuildData.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> time.ts</h1>
+        <h1><a href="index.html">All files</a> appendJenkinsBuildData.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>27/27</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -82,92 +82,56 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">34x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import fs from 'fs';
+import { expandedJenkinsBuildTimeData } from './jenkinsBuildTimeData.interface';
+import { getData } from './retrieveLoggedData';
 &nbsp;
-const unixTimestampToDate = (unixTimestamp: number) =&gt; {
-  const a = new Date(unixTimestamp);
-  const year = a.getFullYear();
-  const month = months[a.getMonth()];
-  const date = a.getDate();
-  const hour = a.getHours();
-  const min = a.getMinutes();
-  const sec = a.getSeconds();
-  return `${date} ${month} ${year} ${hour}:${
-    min &gt; 9? min:<span class="branch-1 cbranch-no" title="branch not covered" >`0${min}`}</span>:${sec &gt; 9 ? sec : <span class="branch-1 cbranch-no" title="branch not covered" >`0${sec}`}</span>`;
+const appendNewData = (newData: expandedJenkinsBuildTimeData[], file: string) =&gt; {
+  const combinedData = findNewData(newData);
+  fs.writeFileSync(file, JSON.stringify(combinedData, null, 2));
 };
 &nbsp;
-const millsecondsToSeconds = (milliseconds: number) =&gt; milliseconds / 1000;
-const secondsToHours = (seconds: number) =&gt; Math.floor(seconds / 60 / 60);
-const secondsToMinutes = (seconds: number) =&gt; Math.floor(seconds / 60);
-&nbsp;
-const pad = (num: number, size: number) =&gt; (`000${num}`).slice(size * -1);
-&nbsp;
-const durationToMinutes = (duration: number) =&gt; {
-  const seconds = millsecondsToSeconds(duration);
-  return secondsToMinutes(seconds);
+const findNewData = (newData: expandedJenkinsBuildTimeData[]) =&gt; {
+  const currentBuildData = getData();
+  const currentBuildNumbers = getCurrentBuildnumbers(currentBuildData);
+  const dataToBeAppended = newData.filter((data) =&gt; {
+    return (data !== null &amp;&amp; !currentBuildNumbers.includes(data.buildNumber));
+  });
+  return currentBuildData.concat(dataToBeAppended);
 };
 &nbsp;
-const durationToHours = (duration: number) =&gt; {
-  const timeInSeconds: number = millsecondsToSeconds(duration);
-  const hours = secondsToHours(timeInSeconds);
-  const minutes = secondsToMinutes(timeInSeconds) % 60;
-  const seconds = Math.floor(timeInSeconds - minutes * 60);
+const getCurrentBuildnumbers = (currentData: expandedJenkinsBuildTimeData[]) =&gt; {
+    return currentData.map((data: expandedJenkinsBuildTimeData) =&gt; {
+        return data.buildNumber;
+    });
+}
 &nbsp;
-  return `${pad(hours, 2)}:${pad(minutes, 2)}:${pad(seconds, 2)}`;
-};
-&nbsp;
-export {
-  unixTimestampToDate, durationToHours, secondsToMinutes, millsecondsToSeconds, durationToMinutes
-};
+export { appendNewData };
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

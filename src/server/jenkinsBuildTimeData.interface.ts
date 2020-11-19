@@ -1,7 +1,7 @@
 export interface jenkinsBuildTimeData {
     duration: number;
     id: string;
-    result: 'SUCCESS' | 'FAILURE' | null;
+    result: 'SUCCESS' | 'FAILURE' | 'ABORTED' | null;
     timestamp: number;
 }
 
@@ -10,5 +10,5 @@ export interface expandedJenkinsBuildTimeData {
     date: string;
     duration: string;
     minutes: number;
-    result: 'SUCCESS' | 'FAILURE' | null;
+    result: 'SUCCESS' | 'FAILURE' | 'ABORTED' | null;
 }

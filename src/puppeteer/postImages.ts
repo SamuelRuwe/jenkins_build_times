@@ -13,4 +13,5 @@ const capture = async (url: string) => {
   });
   await browser.close();
 };
+
 capture(PAGE_URL);
