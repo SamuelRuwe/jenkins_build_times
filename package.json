@@ -1,7 +1,7 @@
 {
-  "name": "simplenodeproxy",
+  "name": "BTCruiser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Application for Capturing BuildTimes",
   "main": "src/app.js",
   "scripts": {
     "server": "npx ts-node src/server/server.ts",
@@ -9,10 +9,10 @@
     "clean": "npx eslint src/ --ext .ts,.js --fix",
     "build": "npx webpack --mode production",
     "client": "webpack serve --mode development --devtool inline-source-map --hot",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run capture\" -k",
     "capture": "npx ts-node src/puppeteer/postImages.ts"
   },
-  "author": "",
+  "author": "Samuel Ruwe",
   "license": "ISC",
   "dependencies": {
     "@babel/preset-env": "^7.12.1",

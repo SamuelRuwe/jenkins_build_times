@@ -10,16 +10,10 @@ const appendNewData = (newData: expandedJenkinsBuildTimeData[], file: string) =>
 const findNewData = (newData: expandedJenkinsBuildTimeData[]) => {
   const currentBuildData = getData();
   const currentBuildNumbers = getCurrentBuildnumbers(currentBuildData);
-  const dataToBeAppended = newData.filter((data) => {
-    return (data !== null && !currentBuildNumbers.includes(data.buildNumber));
-  });
+  const dataToBeAppended = newData.filter((data) => (data !== null && !currentBuildNumbers.includes(data.buildNumber)));
   return currentBuildData.concat(dataToBeAppended);
 };
 
-const getCurrentBuildnumbers = (currentData: expandedJenkinsBuildTimeData[]) => {
-    return currentData.map((data: expandedJenkinsBuildTimeData) => {
-        return data.buildNumber;
-    });
-}
+const getCurrentBuildnumbers = (currentData: expandedJenkinsBuildTimeData[]) => currentData.map((data: expandedJenkinsBuildTimeData) => data.buildNumber);
 
 export { appendNewData };
