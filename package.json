@@ -9,8 +9,9 @@
     "clean": "npx eslint src/ --ext .ts,.js --fix",
     "build": "npx webpack --mode production",
     "client": "webpack serve --mode development --devtool inline-source-map --hot",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run capture\" -k -s 'first'",
-    "capture": "npx ts-node src/puppeteer/postImages.ts"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "capture": "npx ts-node src/puppeteer/postImages.ts",
+    "capture:script": "concurrently \"npm run server\" \"npm run client\" \"npm run capture\" -k -s 'first'"
   },
   "author": "Samuel Ruwe",
   "license": "ISC",

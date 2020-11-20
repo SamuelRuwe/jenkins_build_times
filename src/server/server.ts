@@ -15,7 +15,7 @@ app.get('/api/data', async (req, res) => {
   const data = await fetchData(jobLinks.MERGE_MASTER.link);
   // console.log("Appending Data!");
   appendNewData(data, fileLocation);
-  const actualData = getData();
+  const actualData = getData(fileLocation);
   const successfulBuilds = removeFailures(actualData);
   const sortedData = sortByBuildNumber(successfulBuilds);
   res.send(sortedData);
