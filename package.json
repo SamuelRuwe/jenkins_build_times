@@ -9,7 +9,7 @@
     "clean": "npx eslint src/ --ext .ts,.js --fix",
     "build": "npx webpack --mode production",
     "client": "webpack serve --mode development --devtool inline-source-map --hot",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run capture\" -k",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run capture\" -k -s 'first'",
     "capture": "npx ts-node src/puppeteer/postImages.ts"
   },
   "author": "Samuel Ruwe",

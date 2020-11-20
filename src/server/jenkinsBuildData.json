@@ -236,5 +236,12 @@
     "result": null,
     "duration": "00:00:00",
     "minutes": 0
+  },
+  {
+    "buildNumber": "1622",
+    "date": "20 Nov 2020 10:03:06",
+    "result": "FAILURE",
+    "duration": "01:13:32",
+    "minutes": 73
   }
 ]
